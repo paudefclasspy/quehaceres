@@ -8,12 +8,14 @@
     {% for tarea in object_list%}
     <tr>
         <td>{{tarea.title}}</td>
+        <td><a href="{%url 'tarea' tarea.id%}"> Mirar </a> </td>
         <tr>
             <th>Descripcion</th>
         </tr>
         <td>{{tarea.description}}</td>
         <tr>
             <th>Completado</th>
+            
         </tr>
         <td>{{tarea.complete}}</td>
     </tr>
