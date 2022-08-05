@@ -1,0 +1,22 @@
+<h1> Mi Lista de Quehaceres </h1>
+
+
+<table>
+    <tr>
+        <th>Quehacer</th>
+    </tr>
+    {% for tarea in object_list%}
+    <tr>
+        <td>{{tarea.title}}</td>
+        <tr>
+            <th>Descripcion</th>
+        </tr>
+        <td>{{tarea.description}}</td>
+        <tr>
+            <th>Completado</th>
+        </tr>
+        <td>{{tarea.complete}}</td>
+    </tr>
+
+    {%endfor%}
+</table>

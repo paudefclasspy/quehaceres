@@ -1,6 +1,12 @@
+from asyncio import tasks
+from multiprocessing import context
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Tarea
+from django.views.generic.list import ListView
 
-def tarea(request):
-    return HttpResponse("Hola que tal")
+class ListaTarea(ListView):
+    model = Tarea
+
+    
